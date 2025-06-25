@@ -204,16 +204,21 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 
 <script>
   var disqus_config = function () {
-    this.page.url = window.location.href;  // Replace with your page's canonical URL if needed
-    this.page.identifier = "home-page";    // Unique identifier for this page
+    this.page.url = window.location.href;  // Replace if needed
+    this.page.identifier = "home-page";    // Unique ID
   };
 
-  (function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://harmonious-hormones.disqus.com/embed.js';  // Replace with your Disqus shortname
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
+  var disqus_loaded = false;
+  window.addEventListener('scroll', function () {
+    var thread = document.getElementById('disqus_thread');
+    if (!disqus_loaded && window.scrollY + window.innerHeight >= thread.offsetTop) {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://harmonious-hormones.disqus.com/embed.js'; // Your Disqus shortname
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      disqus_loaded = true;
+    }
+  });
 </script>
 
 <noscript>
