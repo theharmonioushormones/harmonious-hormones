@@ -311,6 +311,33 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
 </div>
 </div>
 </main>
+	<p class="has-text-align-center has-medium-font-size">Your opion and views matter :) ...click on the below Icon to share</p>
+<div id="disqus_thread"></div>
+<!-- Disqus Comment Thread -->
+
+<script>
+  var disqus_config = function () {
+    this.page.url = window.location.href;  // Replace if needed
+    this.page.identifier = "home-page";    // Unique ID
+  };
+
+  var disqus_loaded = false;
+  window.addEventListener('scroll', function () {
+    var thread = document.getElementById('disqus_thread');
+    if (!disqus_loaded && window.scrollY + window.innerHeight >= thread.offsetTop) {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://harmonious-hormones.disqus.com/embed.js'; // Your Disqus shortname
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      disqus_loaded = true;
+    }
+  });
+</script>
+
+<noscript>
+  Please enable JavaScript to view the 
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
 <footer class="wp-block-template-part">
