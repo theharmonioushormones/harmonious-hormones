@@ -2,6 +2,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const head = document.head;
   const domain = 'https://harmonious-hormones.com';
 
+  // ===== Google Analytics 4 (GA4) =====
+  const gaScript = document.createElement("script");
+  gaScript.async = true;
+  gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"; // replace with your GA4 ID
+  head.appendChild(gaScript);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX'); // replace with your GA4 ID
+
+  // ===== Dynamic Meta Tags =====
   const metas = {
     '': {  // homepage (empty slug)
       description: 'Welcome to Harmonious Hormones — your guide to hormonal and reproductive health.',
@@ -65,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ===== Disqus comment injection & lazy load =====
   const disqusShortname = 'harmonious-hormones';
-
   const mainContent = document.querySelector('main') || document.body;
 
   if (!document.getElementById('disqus_thread')) {
