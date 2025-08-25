@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // ===== Google Analytics 4 (GA4) =====
   const gaScript = document.createElement("script");
   gaScript.async = true;
-  gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"; // replace with your GA4 ID
+  gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-HBEDZTK7HB"; // replace with your GA4 ID
   head.appendChild(gaScript);
 
   window.dataLayer = window.dataLayer || [];
