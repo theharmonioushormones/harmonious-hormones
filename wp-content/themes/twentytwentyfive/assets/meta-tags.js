@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.dataLayer = window.dataLayer || [];
   function gtag(){ dataLayer.push(arguments); }
   gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX'); // replace with your GA4 ID
+  gtag('config', 'G-HBEDZTK7HB'); // replace with your GA4 ID
 
   // ===== Dynamic Meta Tags =====
   const metas = {
