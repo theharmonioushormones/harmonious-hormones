@@ -63,7 +63,7 @@
       url: "https://harmonious-hormones.com/cycle-and-diet/",
       type: "article"
     },
-    "cycle-and-workout": {
+    "cycle-and-workouts": {
       title: "Cycle and Workout – Exercise for Each Phase",
       description: "Workout strategies to support energy and hormone changes throughout your cycle.",
       image: "https://harmonious-hormones.com/wp-content/uploads/2025/07/cycle-workout-thumbnail.jpg",
