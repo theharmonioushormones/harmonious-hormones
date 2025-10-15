@@ -1,7 +1,19 @@
 // assets/meta-disqus.js
-// Inject meta tags + Disqus thread dynamically
+// Inject meta tags + Disqus thread dynamically + Google Analytics
 
 (function () {
+  // ---------- Google Analytics (GA4) ----------
+  const gaScript = document.createElement('script');
+  gaScript.async = true;
+  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+  document.head.appendChild(gaScript);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+
+  // ---------- Determine Slug ----------
   const slug = window.location.pathname.replace(/^\/|\/$/g, '');
 
   // ---------- Meta Data ----------
@@ -119,7 +131,7 @@
     const loadDisqus = () => {
       if (window.DISQUS) return; // already loaded
       const d = document, s = d.createElement('script');
-      s.src = 'https://harmonious-hormones.disqus.com/embed.js'; // replace with your Disqus shortname if different
+      s.src = 'https://harmonious-hormones.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
     };
